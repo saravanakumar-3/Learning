@@ -1,0 +1,7 @@
+logging:
+  level:
+    root: ERROR
+    WireMock: ERROR
+    org:
+      eclipse:
+        jetty: ERROR
