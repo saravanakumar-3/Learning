@@ -1,22 +1,18 @@
-package com.learning.examples;
+package com.learning.leetcode;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.learning.model.PaymentMessage;
 import lombok.SneakyThrows;
-import net.minidev.json.JSONObject;
-import org.apache.commons.lang3.StringEscapeUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Temp {
+public class LengthOfLongestSubstring {
   @SneakyThrows
   public static void main(String[] args) {
     System.out.println(lengthOfLongestSubstringNew("abdedfgh"));
   }
 
+  // Solution 1 - Simple
   public static int lengthOfLongestSubstring(String s) {
     int result = 0;
     for (int i = 0; i < s.length(); i++) {
@@ -32,6 +28,7 @@ public class Temp {
     return result;
   }
 
+    // Solution 2 - Complex
   public static int lengthOfLongestSubstringNew(String s) {
     int n = s.length();
     int maxLength = 0;
@@ -54,7 +51,6 @@ public class Temp {
         charSet.add(charAtRight);
       }
     }
-
     return maxLength;
   }
 }
