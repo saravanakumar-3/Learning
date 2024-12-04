@@ -7,6 +7,5 @@ public class LoggingExample {
   public static void logging() {
     log.info("LoggingExample - info");
     log.debug("LoggingExample - debug");
-    Example.log();
   }
 }
