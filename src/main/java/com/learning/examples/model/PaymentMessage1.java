@@ -1,4 +1,4 @@
-package com.learning.model;
+package com.learning.examples.model;
 
 import java.io.Serializable;
 import lombok.AllArgsConstructor;

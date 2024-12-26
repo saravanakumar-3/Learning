@@ -1,20 +1,20 @@
 package com.learning.examples;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.learning.model.PaymentMessage;
 import lombok.SneakyThrows;
-import net.minidev.json.JSONObject;
-import org.apache.commons.lang3.StringEscapeUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 public class Temp {
   @SneakyThrows
   public static void main(String[] args) {
-    char x = 97;
-    System.out.println(String.valueOf(x));
+    List list = new ArrayList<String>();
+    list.add(1);
+    list.add("11");
+    System.out.println(list);
+    System.out.println(list.get(0) instanceof Integer);
+    System.out.println(list.get(0) instanceof String);
+    System.out.println(list.get(1) instanceof Integer);
+    System.out.println(list.get(1) instanceof String);
   }
 }

@@ -1,17 +1,16 @@
-package com.learning.model;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
+package com.learning.examples.model;
 
 import java.io.Serializable;
+import java.time.Instant;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
 @ToString
-@Data
-public class PaymentMessage2 implements Serializable {
+public class PaymentMessage implements Serializable {
   public int id;
   public String name;
+  public Instant time;
 }

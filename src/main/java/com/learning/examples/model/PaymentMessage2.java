@@ -1,17 +1,17 @@
-package com.learning.model;
+package com.learning.examples.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @RequiredArgsConstructor
 @ToString
-public class PaymentMessageNew implements Serializable {
+@Data
+public class PaymentMessage2 implements Serializable {
   public int id;
   public String name;
-  public LocalDateTime time;
 }

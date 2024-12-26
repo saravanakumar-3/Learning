@@ -1,6 +1,6 @@
 package com.learning.leetcode;
 
-import com.learning.model.ListNode;
+import com.learning.examples.model.ListNode;
 import lombok.SneakyThrows;
 
 import java.util.ArrayList;

@@ -2,7 +2,7 @@ package com.learning.examples;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.learning.model.PaymentMessageNew;
+import com.learning.examples.model.PaymentMessageNew;
 
 import java.time.LocalDateTime;
 

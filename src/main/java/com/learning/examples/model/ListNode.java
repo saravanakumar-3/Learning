@@ -1,4 +1,4 @@
-package com.learning.model;
+package com.learning.examples.model;
 
 public class ListNode {
       public int val;

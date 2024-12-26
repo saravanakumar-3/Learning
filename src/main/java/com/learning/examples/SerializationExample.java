@@ -1,6 +1,6 @@
 package com.learning.examples;
 
-import com.learning.model.PaymentMessage;
+import com.learning.examples.model.PaymentMessage;
 
 import java.io.*;
 import java.time.Instant;

@@ -16,7 +16,7 @@ public class AssertExample {
     //    System.out.println(list2);
     //    assertThat(list2, Matchers.containsInAnyOrder(list1.toArray()));
     List<String> str1 = List.of("2", "1");
-    List<String> str2 = List.of("1", "2", "3");
-    assertThat(str1, Matchers.containsInAnyOrder(str2.toArray()));
+    List<String> str2 = List.of("2", "1");
+    assertThat(str1, Matchers.contains(str2.toArray()));
   }
 }
