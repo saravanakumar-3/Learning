@@ -13,6 +13,8 @@ public class SerializationExample {
     out.println(PaymentMessage);
     FileOutputStream fileOutputStream =
         new FileOutputStream("C:\\Users\\sardurai\\Downloads\\TestingSerialization.txt");
+    FileOutputStream s;
+    OutputStreamWriter sl;
     ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
     objectOutputStream.writeObject(PaymentMessage);
     FileInputStream fileInputStreamputStream =

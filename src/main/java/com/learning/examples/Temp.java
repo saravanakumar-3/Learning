@@ -1,23 +1,28 @@
 package com.learning.examples;
 
+import java.util.*;
 import lombok.SneakyThrows;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Temp {
   @SneakyThrows
   public static void main(String[] args) {
-    char x = '2';
-    int xx = x;
-    System.out.println(x);
-    System.out.println(xx);
-    List<List<String>> result = new ArrayList<>();
-    List<char[]> list = List.of("sddd".toCharArray());
-  }
+    int[] arr = {2, 4, 1, 3};
+    System.out.println(Arrays.toString(arr));
 
-  private static void removeElement(int[] nums) {
-    nums[2] = 1111;
+    for (int i = 0; i < arr.length; i++) {
+      boolean isSorted = true;
+      for (int j = 0; j < arr.length - 1 - i; j++) {
+        if (arr[j] > arr[j + 1]) {
+          int temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+          isSorted = false;
+        }
+      }
+      if (isSorted) {
+        break;
+      }
+    }
+    System.out.println(Arrays.toString(arr));
   }
 }

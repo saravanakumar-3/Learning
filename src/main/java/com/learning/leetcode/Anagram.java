@@ -32,6 +32,7 @@ public class Anagram {
         return false;
       }
     }
+    Character[] array = l.toArray(new Character[0]);
     return l.isEmpty();
   }
 }

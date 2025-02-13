@@ -7,11 +7,11 @@ public class PrimeNumber {
   public static void main(String[] args) {
     System.out.println(isPrimeNumber(122));
     System.out.println(isPrimeNumber(7));
-    List<Integer> list = getPrimeNumersUpto(100);
+    List<Integer> list = getPrimeNumbersUpto(100);
     System.out.println(list);
   }
 
-  private static List<Integer> getPrimeNumersUpto(int count) {
+  private static List<Integer> getPrimeNumbersUpto(int count) {
     List<Integer> list = new ArrayList<>();
     for (int i = 2; i <= count; i++) {
       if (isPrimeNumber(i)) {

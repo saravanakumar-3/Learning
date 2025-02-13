@@ -1,31 +1,33 @@
 package com.learning.leetcode;
 
-import lombok.SneakyThrows;
-
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import lombok.SneakyThrows;
 
 public class LengthOfLongestSubstring {
   @SneakyThrows
   public static void main(String[] args) {
+    System.out.println(lengthOfLongestSubstring("abdedfgh"));
     System.out.println(lengthOfLongestSubstringNew("abdedfgh"));
+    System.out.println(lengthOfLongestSubstringNewNew("a"));
   }
 
   // Solution 1 - Simple
   public static int lengthOfLongestSubstring(String s) {
-    int result = 0;
+    int max = 0;
     for (int i = 0; i < s.length(); i++) {
       ArrayList<Character> list = new ArrayList<>();
       for (int j = i; j < s.length(); j++) {
         if (list.contains(s.charAt(j))) {
           break;
         }
-        list.add(s.charAt(i));
+        list.add(s.charAt(j));
       }
-      result = Math.max(result, list.size());
+      max = Math.max(max, list.size());
     }
-    return result;
+    return max;
   }
 
     // Solution 2 - Complex
@@ -41,7 +43,7 @@ public class LengthOfLongestSubstring {
       charAtRight = s.charAt(right);
       if (!charSet.contains(charAtRight)) {
         charSet.add(charAtRight);
-        maxLength = Math.max(maxLength, right - left + 1);
+        maxLength = Math.max(maxLength, (right - left) + 1);
       } else {
         while (charSet.contains(charAtRight)) {
           charAtLeft = s.charAt(left);
@@ -52,5 +54,27 @@ public class LengthOfLongestSubstring {
       }
     }
     return maxLength;
+  }
+
+  public static int lengthOfLongestSubstringNewNew(String s) {
+    int max = 0;
+    for (int i = 0; i < s.length(); i++) {
+      for (int j = i; j <= s.length(); j++) {
+        String t = s.substring(i, j);
+        if(max >= t.length()) {
+          continue;
+        }
+        List<Character> list = new ArrayList<>();
+        for (Character c : t.toCharArray()) {
+          if (list.contains(c)) {
+            break;
+          } else {
+            list.add(c);
+          }
+        }
+        max = Math.max(max, list.size());
+      }
+    }
+    return max;
   }
 }

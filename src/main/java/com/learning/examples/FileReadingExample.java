@@ -7,10 +7,10 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class FileReadingExample {
   public static void main(String[] args) throws IOException {
-    List<String> stringList = new ArrayList<>();
     File folder = new File("C:\\Users\\sardurai\\Downloads\\New folder");
     for (File file : folder.listFiles()) {
       BufferedReader br = new BufferedReader(new FileReader(file));
@@ -21,9 +21,9 @@ public class FileReadingExample {
         str.append(line).append(System.lineSeparator());
       }
       HashMap<String, String> map =
-          new ObjectMapper()
-              .readValue(str.toString(), new TypeReference<HashMap<String, String>>() {});
+          new ObjectMapper().readValue(str.toString(), new TypeReference<>() {});
       map.containsKey("schemaDescription");
+      Predicate s;
       JsonPath.read(str, "$.schemaDescription");
     }
   }
