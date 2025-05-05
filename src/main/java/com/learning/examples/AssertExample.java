@@ -18,5 +18,8 @@ public class AssertExample {
     List<String> str1 = List.of("2", "1");
     List<String> str2 = List.of("2", "1");
     assertThat(str1, Matchers.contains(str2.toArray()));
+    assertThat(str1, Matchers.hasItems("2", "1"));
+    assertThat(str1, Matchers.hasItems("2", "3"));
+
   }
 }

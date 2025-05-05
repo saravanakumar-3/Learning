@@ -5,8 +5,7 @@ import static org.hamcrest.Matchers.is;
 
 public class ReverseString {
   public static void main(String[] args) {
-    String reverse = reverse("12345");
-    assertThat(reverse, is("54321"));
+    assertThat(reverse("12345"), is("54321"));
   }
 
   private static String reverse(String s) {
