@@ -6,6 +6,7 @@ import static org.hamcrest.Matchers.is;
 public class ReverseString {
   public static void main(String[] args) {
     assertThat(reverse("12345"), is("54321"));
+    assertThat(reverse("fed cba"), is("abc def"));
   }
 
   private static String reverse(String s) {
