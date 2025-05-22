@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArmstrongNumber {
+  // a number that is equal to the sum of its digits each raised to the power of the number of
+  // digits
+
+  // Example -> 153 = 1^3 + 5^3 + 3^3
   public static void main(String[] args) {
     System.out.println(isArmstrongNumber(153));
     assertThat(isArmstrongNumber(153), is(true));
