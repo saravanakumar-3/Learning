@@ -21,8 +21,6 @@ public class CompareJsonStrings {
       "{\"lastName\":\"Saravanakumar\",\"firstName\":\"Amsa\", \"ids\":[1,2,3]}";
   private static final String json4 =
       "{\"firstName\":\"Amsa\",\"lastName\":\"Saravanakumar\", \"ids\":[2,1,3]}";
-  private static final String json5 =
-          "{\"firstName\":\"Amsa\",\"lastName\":\"Saravanakumar\", \"ids\":[2,1,1]}";
   private static final ObjectMapper om = new ObjectMapper();
 
   @SneakyThrows

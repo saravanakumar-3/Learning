@@ -1,7 +1,5 @@
 package com.learning.leetcode;
 
-import static com.learning.leetcode.Anagram.isAnagram;
-
 import java.util.*;
 import lombok.SneakyThrows;
 
