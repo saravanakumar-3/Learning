@@ -1,15 +1,19 @@
 package com.learning.leetcode;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 import lombok.SneakyThrows;
 
 public class Palindrome {
+  // a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or nurses run
   @SneakyThrows
   public static void main(String[] args) {
-    System.out.println(isPalindrome1(121));
-    System.out.println(isPalindrome1(1221));
-    System.out.println(isPalindrome1(0));
-    System.out.println(isPalindrome1(1));
-    System.out.println(isPalindrome1(-121));
+    assertThat(isPalindrome1(121), is(true));
+    assertThat(isPalindrome1(1221), is(true));
+    assertThat(isPalindrome1(0), is(true));
+    assertThat(isPalindrome1(1), is(true));
+    assertThat(isPalindrome1(-121), is(false));
   }
 
   public static boolean isPalindrome1(int x) {
